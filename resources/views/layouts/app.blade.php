@@ -154,9 +154,9 @@
                 <aside class="main-sidebar sidebar-dark-primary elevation-4">
                     <!-- Brand Logo -->
                     <a href="{{ url('/') }}" class="brand-link">
-                        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                        <img src="dist/img/0005.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                             style="opacity: .8">
-                        <span class="brand-text font-weight-light">System Team</span>
+                        <span class="brand-text font-weight-light">Sistema Telefonico</span>
                     </a>
     
                     <!-- Sidebar -->
@@ -164,7 +164,7 @@
                         <!-- Sidebar user panel (optional) -->
                         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                             <div class="image">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                                <img src="dist/img/002.jpg" class="img-circle elevation-2" alt="User Image">
                             </div>
                             <div class="info">
                                 <a href="#" class="d-block">
@@ -172,8 +172,8 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                                     @else
                                     {{ Auth::user()->name }}
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item " href="{{ route('logout') }}" onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();" style="color: #c5d4e3">
                                         Cerrar Sesión
                                     </a>
     
@@ -198,19 +198,31 @@
                                         <p>Inicio</p>
                                     </a>
                                 </li>
-    
+   
                                 <li class="nav-item">
                                     <a href="usuarios"
                                         class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
                                         <i class="nav-icon fas fa-users"></i>
                                         <p>
-                                            Usuarios
+                                            Administradores
                                             <?php use App\User; $users_count = User::all()->count(); ?>
                                             <span class="right badge badge-danger">{{ $users_count ?? '0' }}</span>
                                         </p>
                                     </a>
                                 </li>
-    
+
+
+                                <li class="nav-item">
+                                    <a href="administradores"
+                                        class="{{ Request::path() === 'administradores' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            usuarios
+
+                                        </p>
+                                    </a>
+                                </li>
+
                                 <li class="nav-item has-treeview">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon far fa-sticky-note"></i>
