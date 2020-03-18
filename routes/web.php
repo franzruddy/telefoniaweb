@@ -20,3 +20,11 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/usuarios', 'UserController@index');
+
+/*Route::get('/usuarios1', function (){
+    return view ('usuarios1.index');
+});
+Route::get('/usuarios1', 'Usuarios1Controller@index');*/
+
+
+Route::resource('usuarios1', 'Usuarios1Controller');
